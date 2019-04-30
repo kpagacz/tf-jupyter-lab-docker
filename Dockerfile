@@ -6,6 +6,6 @@ WORKDIR /
 
 RUN pip install --upgrade pip && pip install jupyterlab
 RUN jupyter-lab --generate-config
-RUN nohup jupyter-lab --no-browser --allow-root --port=8888 --ip=0.0.0.0
+RUN nohup jupyter-lab --no-browser --allow-root --port=8888 --ip=0.0.0.0 &
 
 CMD ["/bin/bash"]
