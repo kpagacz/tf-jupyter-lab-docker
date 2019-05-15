@@ -21,7 +21,7 @@ You should be able to see an image called test1. This is our image!
 
 ### Running the container
 ```bash
-sudo docker run -dit --name test-lab --p hostport:8888 test1
+sudo docker run -dit --name test-lab --p hostport:8888 --runtime=nvidia kpagacz/tf-jupyter-lab-docker
 ```
 This will run a container named test-lab on a port number hostport (please input a real number here). 
 You should be able to see your running container via:
