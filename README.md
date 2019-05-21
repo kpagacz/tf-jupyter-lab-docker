@@ -4,6 +4,7 @@ A custom docker image based on tensorflow/tensorflow:latest-gpu-py3 with Jupyter
 ### Installation
 You need to have docker installed and a running instance of a docker daemon on a host machine.
 
+### Manual building
 Input in the host machine:
 ```bash
 git clone https://github.com/kpagacz/tf-jupyter-lab-docker
@@ -19,7 +20,11 @@ sudo docker images
 ```
 You should be able to see an image called test1. This is our image!
 
-### Running the container
+```bash
+sudo docker run -dit --name test-lab --p hostport:8888 --runtime=nvidia test1
+```
+
+### Using DockerHub image
 ```bash
 sudo docker run -dit --name test-lab --p hostport:8888 --runtime=nvidia kpagacz/tf-jupyterlab
 ```
